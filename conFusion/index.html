@@ -156,7 +156,7 @@
                             <label for="telnum" class="col-12 col-md-2 col-form-label">Section</label>
                             <div class="col-5 col-md-10">
                                 <div class="btn-group" role="group">
-                                    <button type="submit" class="btn btn-success">Non-Smoking</button>
+                                    <button type="submit" class="btn btn-success active">Non-Smoking</button>
                                     <button type="submit" class="btn btn-danger">Smoking</button>
                                 </div>    
                             </div>
@@ -221,7 +221,7 @@
                                     creating mouthwatering Indo-Italian fusion experiences.</p>
                                 </div>
                             
-                        </di    v>
+                        </div>
                     </div>
                     <ol class="carousel-indicators">
                         <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
@@ -234,8 +234,18 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
+       
                 </div>
              </div>
+             
         </div>
 
         <div class="row row-content align-items-center">
@@ -353,7 +363,7 @@
                     <label for="telnum" class="col-12 col-md-2 col-form-label">Section</label>
                     <div class="col-5 col-md-10">
                         <div class="btn-group" role="group">
-                            <button type="submit" class="btn btn-success">Non-Smoking</button>
+                            <button type="submit" class="btn btn-success active">Non-Smoking</button>
                             <button type="submit" class="btn btn-danger">Smoking</button>
                         </div>    
                     </div>
@@ -423,6 +433,17 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
 </body>
 </html>
 
